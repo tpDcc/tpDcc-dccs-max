@@ -10,6 +10,9 @@ from __future__ import print_function, division, absolute_import
 import os
 import inspect
 
+# Do not remove 3ds Max imports
+import MaxPlus
+
 from tpPyUtils import importer
 
 # =================================================================================
