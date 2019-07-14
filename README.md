@@ -1,5 +1,10 @@
 # tpMaxLib
 
+<p align="left">
+    <a href="https://github.com/tpoveda/tpPyUtils/blob/master/LICENSE" alt="License">
+        <img src="https://img.shields.io/github/license/tpoveda/tpMaxLib.svg" /></a>
+</p
+
 3ds Max implementation for tpDccLib and tpQtLib packages.
 
 Also, this module contains a lot of utilities functions and classes to work with 3ds Max Python APIs (MaxPlus and pymxs)
