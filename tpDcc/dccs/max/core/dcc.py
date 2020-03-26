@@ -9,11 +9,11 @@ from __future__ import print_function, division, absolute_import
 
 import MaxPlus
 
-import tpDccLib
-from tpDccLib.abstract import dcc as abstract_dcc
+import tpDcc
+from tpDcc import register
+from tpDcc.abstract import dcc as abstract_dcc
 
-
-from tpMaxLib.core import gui, helpers, scene, directory, viewport
+from tpDcc.dccs.max.core import gui, helpers, scene, directory, viewport
 
 
 class MaxDcc(abstract_dcc.AbstractDCC, object):
@@ -25,7 +25,16 @@ class MaxDcc(abstract_dcc.AbstractDCC, object):
         :return: str
         """
 
-        return tpDccLib.Dccs.Max
+        return tpDcc.Dccs.Max
+
+    @staticmethod
+    def get_extensions():
+        """
+        Returns supported extensions of the DCC
+        :return: list(str)
+        """
+
+        return ['.max']
 
     @staticmethod
     def get_version():
@@ -34,7 +43,16 @@ class MaxDcc(abstract_dcc.AbstractDCC, object):
         :return: int
         """
 
-        return helpers.get_max_version()
+        return int(helpers.get_max_version())
+
+    @staticmethod
+    def get_version_name():
+        """
+        Returns version of the DCC
+        :return: str
+        """
+
+        return str(helpers.get_max_version())
 
     @staticmethod
     def get_main_window():
@@ -99,4 +117,4 @@ class MaxDcc(abstract_dcc.AbstractDCC, object):
         return False
 
 
-tpDccLib.Dcc = MaxDcc
+register.register_class('Dcc', MaxDcc)

@@ -11,9 +11,9 @@ import os
 
 import MaxPlus
 
-from tpQtLib.Qt.QtWidgets import *
+from Qt.QtWidgets import *
 
-from tpPyUtils import python
+from tpDcc.libs.python import python
 
 
 def get_root():

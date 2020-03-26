@@ -9,11 +9,13 @@ Module that contains Max Python functions to work with 3ds Max application
 
 import os
 import math
+import logging
 
 import MaxPlus
 
-import tpMaxLib as tp
-from tpPyUtils import win32
+from tpDcc.libs.python import win32
+
+LOGGER = logging.getLogger()
 
 
 def get_max_version(as_year=True):
@@ -121,7 +123,7 @@ def get_installation_path():
     max_version = str(float(str(version_number)[:2]))
 
     if not win32.get_reg_key('HKEY_LOCAL_MACHINE', 'SOFTWARE\\Autodesk\\3dsMax\\{}'.format(max_version)):
-        tp.logger.error('3ds Max "{}" is not installed in your computer!'.format(year))
+        LOGGER.error('3ds Max "{}" is not installed in your computer!'.format(year))
         return None
 
     key = win32.list_reg_key_values('HKEY_LOCAL_MACHINE', 'SOFTWARE\\Autodesk\\3dsMax\\{}'.format(max_version))

@@ -7,12 +7,13 @@ from __future__ import print_function, division, absolute_import
 Module that contains utility functions related with Autodesk 3ds Max
 """
 
+from Qt.QtWidgets import *
+
 import MaxPlus
 
-from tpPyUtils import path
-from tpQtLib.core import qtutils
-
-from tpMaxLib.core import helpers
+from tpDcc.libs.python import path
+from tpDcc.libs.qt.core import qtutils
+from tpDcc.dccs.max.core import helpers
 
 
 def get_max_window():
@@ -53,7 +54,6 @@ def to_qt_object(max_ptr, qobj=None):
     """
 
     if qtutils.QT_AVAILABLE:
-        from tpQtLib.Qt.QtWidgets import QWidget
         if not qobj:
             qobj = QWidget
         if max_ptr is not None:

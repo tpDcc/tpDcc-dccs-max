@@ -1,0 +1,30 @@
+language: python
+before_install:
+- pip install pycodestyle
+install:
+- pip install -r requirements.txt
+- python setup.py install
+script:
+- find . -name \*.py -exec pycodestyle --max-line-length=120 --ignore=E402 {} +
+- pytest --cov=tpDcc
+- sphinx-apidoc -f -e -o docs/sphinx tpDcc
+- sphinx-build -M html ./docs/sphinx ./
+after_success:
+- coveralls
+- cd html && touch .nojekyll && cd ../
+deploy:
+  - provider: pages
+    skip_cleanup: true
+    github_token: "$GITHUB_TOKEN"
+    keep_history: true
+    local_dir: html
+    on:
+      branch: master
+  - provider: pypi
+    skip_cleanup: true
+    user: tpoveda
+    password:
+      secure: LKr1rY3BTt6GvBA0Tudx2Np93AAfsRNzNa60dvR0DzdhGiF6qGpx9snFZx99NvGyXfI6QKS9xNVTYkFMcEO9GwAh1T7HzhD/nYxj0parQIOp8XyKkTROSHD2J4pLhOOIGd08SHTGXzzwLf3GpOitaYiMcDhwPL+2NJu4XfgVvgv3kAEzGqdf3540VdW+xT366Rh4DcuSMIcY/u5Ns8zwvurA1bAcxgTZrapOaEN8tHec/N7SqtxDtCeiMNqemZVt78ATFrYU+8ElYJO8L5t8Lcvu1QiW6oKeoQLE9aJYk2yVNcshm7c5NtXNa0Do/Gw9kuyiLxAqmLcEf6sViZcm1+KFeVZ4Dep0KLjKZ0x0e320iBOQuhiDEMjsQEb6PMweysA5OK7Yo4alPCTOkiM3LUlFGOOldn0XbJDFvXQicxlug/IlwUxMnThOxb2g1OzeoE+AavIRN9Zut8rtiSbhW4E17sStQhIid0QOfeGu9+X2xAiAMmGJScPYZ8J22zrJTjpjvOPDLZmIuL7/jHUVCXqvRsW7el/9QC2/Qvec/hDVAxbPUb2n9E3R96jk5h9b6R4Br+pX8Xhjefo6/VKMw4u1KwTQbxGWFWzFCC4jjq0e5HW4+F0iE/8B8C7Gg3BBjgOnF5IKmVUSK+r5Aq9o5TgwIIYVACcZuCt3i1htij0=
+    on:
+      branch: master
+      tags: true
