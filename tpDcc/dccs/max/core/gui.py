@@ -49,7 +49,7 @@ def get_max_window():
         hwnd = clonglong.value
         return hwnd
     elif version == 2015 or version == 2016:
-            return long(MaxPlus.Win32.GetMAXHWnd())
+        return long(MaxPlus.Win32.GetMAXHWnd())
     elif version == 2017:
         return MaxPlus.GetQMaxWindow()
     else:
