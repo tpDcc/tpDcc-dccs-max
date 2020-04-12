@@ -63,7 +63,9 @@ def check_node(node_name):
     """
 
     if not python.is_str(node_name) and type(node_name) is not MaxPlus.INode:
-        raise Exception('Given node "{}" has not a valid type: "{}" (str or MaxPlus.INode instead)!'.format(node_name, type(node_name)))
+        raise Exception(
+            'Given node "{}" has not a valid type: "{}" (str or MaxPlus.INode instead)!'.format(
+                node_name, type(node_name)))
 
 
 def node_handle_exists(node_id):

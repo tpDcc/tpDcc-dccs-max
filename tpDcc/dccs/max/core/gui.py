@@ -31,14 +31,22 @@ def get_max_window():
     if version == 2014:
         import ctypes
         import ctypes.wintypes
-        pyobject = MaxPlus.Win32.GetMAXHWnd()                       # Swig Object Containing HWND *
-        hwndptr = pyobject.__int__()                                # Getting actual HWND* mem address
-        ptr = ctypes.c_void_p(hwndptr)                              # Casting to HWD* of Void*
-        ptrvalue = ptr.value                                        # Getting actual Void* mem address (should be same as hwndptr)
-        clonglong = ctypes.c_longlong.from_address(ptrvalue)        # Getting derefeerence Void* and get HWND as c_longlong
-        longhwnd = clonglong.value                                  # Getting actual HWND value from c_longlong
-        chwnd = ctypes.wintypes.HWND.from_address(ptrvalue)         # Getting derefeerence Void* and get HWND as c_longlong
-        hwnd = clonglong.value                                      # Getting actual HWND value from c_longlong
+        # Swig Object Containing HWND *
+        pyobject = MaxPlus.Win32.GetMAXHWnd()
+        # Getting actual HWND* mem address
+        hwndptr = pyobject.__int__()
+        # Casting to HWD* of Void*
+        ptr = ctypes.c_void_p(hwndptr)
+        # Getting actual Void* mem address (should be same as hwndptr)
+        ptrvalue = ptr.value
+        # Getting derefeerence Void* and get HWND as c_longlong
+        clonglong = ctypes.c_longlong.from_address(ptrvalue)
+        # Getting actual HWND value from c_longlong
+        longhwnd = clonglong.value
+        # Getting derefeerence Void* and get HWND as c_longlong
+        chwnd = ctypes.wintypes.HWND.from_address(ptrvalue)
+        # Getting actual HWND value from c_longlong
+        hwnd = clonglong.value
         return hwnd
     elif version == 2015 or version == 2016:
             return long(MaxPlus.Win32.GetMAXHWnd())

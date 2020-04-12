@@ -69,7 +69,8 @@ def get_max_release_version(version_id):
         Release 17000 == Max 2015, Release 179000 == 2016 alpha, etc
 
     .. seealso::
-        `Max Plus Application Class: Get3DSMAXVersion <https://help.autodesk.com/view/3DSMAX/2018/ENU/?guid=__py_ref_class_max_plus_1_1_application_html>`_
+        `Max Plus Application Class: Get3DSMAXVersion
+        <https://help.autodesk.com/view/3DSMAX/2018/ENU/?guid=__py_ref_class_max_plus_1_1_application_html>`_
     """
 
     version_number = (version_id >> 16) & 0xffff
