@@ -1,0 +1,7 @@
+tpDcc.dccs.max.ui.window module
+===============================
+
+.. automodule:: tpDcc.dccs.max.ui.window
+   :members:
+   :undoc-members:
+   :show-inheritance:

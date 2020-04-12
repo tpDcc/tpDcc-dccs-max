@@ -1,0 +1,7 @@
+tpDcc.dccs.max.core.directory module
+====================================
+
+.. automodule:: tpDcc.dccs.max.core.directory
+   :members:
+   :undoc-members:
+   :show-inheritance:

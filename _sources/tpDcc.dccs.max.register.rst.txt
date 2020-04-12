@@ -1,0 +1,7 @@
+tpDcc.dccs.max.register module
+==============================
+
+.. automodule:: tpDcc.dccs.max.register
+   :members:
+   :undoc-members:
+   :show-inheritance:

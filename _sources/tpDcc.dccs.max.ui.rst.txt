@@ -1,0 +1,19 @@
+tpDcc.dccs.max.ui package
+=========================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   tpDcc.dccs.max.ui.dialog
+   tpDcc.dccs.max.ui.window
+
+Module contents
+---------------
+
+.. automodule:: tpDcc.dccs.max.ui
+   :members:
+   :undoc-members:
+   :show-inheritance:

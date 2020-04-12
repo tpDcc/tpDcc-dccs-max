@@ -1,0 +1,7 @@
+tpDcc.dccs.max.core.viewport module
+===================================
+
+.. automodule:: tpDcc.dccs.max.core.viewport
+   :members:
+   :undoc-members:
+   :show-inheritance:

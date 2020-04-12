@@ -1,0 +1,7 @@
+tpDcc.dccs.max.loader module
+============================
+
+.. automodule:: tpDcc.dccs.max.loader
+   :members:
+   :undoc-members:
+   :show-inheritance:

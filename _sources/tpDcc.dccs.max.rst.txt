@@ -1,0 +1,28 @@
+tpDcc.dccs.max package
+======================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   tpDcc.dccs.max.core
+   tpDcc.dccs.max.ui
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   tpDcc.dccs.max.loader
+   tpDcc.dccs.max.register
+
+Module contents
+---------------
+
+.. automodule:: tpDcc.dccs.max
+   :members:
+   :undoc-members:
+   :show-inheritance:

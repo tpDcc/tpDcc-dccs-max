@@ -1,0 +1,7 @@
+tpDcc.dccs.max.core.gui module
+==============================
+
+.. automodule:: tpDcc.dccs.max.core.gui
+   :members:
+   :undoc-members:
+   :show-inheritance:

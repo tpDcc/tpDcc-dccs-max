@@ -1,0 +1,7 @@
+tpDcc.dccs.max.ui.dialog module
+===============================
+
+.. automodule:: tpDcc.dccs.max.ui.dialog
+   :members:
+   :undoc-members:
+   :show-inheritance:

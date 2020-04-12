@@ -1,0 +1,23 @@
+tpDcc.dccs.max.core package
+===========================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   tpDcc.dccs.max.core.dcc
+   tpDcc.dccs.max.core.directory
+   tpDcc.dccs.max.core.gui
+   tpDcc.dccs.max.core.helpers
+   tpDcc.dccs.max.core.scene
+   tpDcc.dccs.max.core.viewport
+
+Module contents
+---------------
+
+.. automodule:: tpDcc.dccs.max.core
+   :members:
+   :undoc-members:
+   :show-inheritance:
