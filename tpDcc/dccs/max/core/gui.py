@@ -1,11 +1,11 @@
 # !/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from __future__ import print_function, division, absolute_import
-
 """
 Module that contains utility functions related with Autodesk 3ds Max
 """
+
+from __future__ import print_function, division, absolute_import
 
 from Qt.QtWidgets import *
 

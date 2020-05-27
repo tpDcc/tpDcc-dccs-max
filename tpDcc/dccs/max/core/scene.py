@@ -345,7 +345,7 @@ def save():
     if file_check_state:
         if file_check_state:
             msg_box = QMessageBox()
-            msg_box.setText('The Maya scene has been modified')
+            msg_box.setText('The 3ds Max scene has been modified')
             msg_box.setInformativeText('Do you want to save your changes?')
             msg_box.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
             msg_box.setDefaultButton(QMessageBox.Yes)
